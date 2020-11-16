@@ -44,7 +44,8 @@ public class BufferDemo {
     public static void main(String[] args) throws Exception{
         //test01();
         //test02();
-        test03();
+        //test03();
+        test04();
     }
 
     private static void test01() throws UnsupportedEncodingException {
@@ -132,6 +133,20 @@ public class BufferDemo {
         System.out.println(byteBuffer.isDirect());
     }
 
+
+    private static void test04()throws Exception{
+        ByteBuffer buffer = ByteBuffer.allocate(1024);
+        System.out.println("初始创建buffer"+"\t"+buffer.position()+"\t"+buffer.limit()+"\t"+buffer.capacity());
+        buffer.put("abcd".getBytes());
+        System.out.println("put->abcd"+"\t"+buffer.position()+"\t"+buffer.limit()+"\t"+buffer.capacity());
+        //当前是写模式，要是想读取就要转换模式
+        buffer.flip();
+        System.out.println("**************转换模式********************");
+        for (int i = 0; i < 4; i++) {
+            System.out.println(buffer.get());
+        }
+        System.out.println("循环遍历"+"\t"+buffer.position()+"\t"+buffer.limit()+"\t"+buffer.capacity());
+    }
 
 
 }
