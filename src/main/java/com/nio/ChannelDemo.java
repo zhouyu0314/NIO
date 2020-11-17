@@ -34,6 +34,10 @@ import java.util.Set;
  * ServerSocket
  * DatagramSocket
  * 2.在JDK 1.7中的NIO.2针对各个通道提供了静态方法open()
+ * --FileChannel ---本地文件
+ * --SocketChannel ----tcp
+ * --ServerSocketChannel ----tcp
+ * --DatagramChannel ----udp
  * 3.在JDK 1.7中的NIO.2的Files工具类的newByteChannel()
  *
  * 四、通道之间的数据传输
@@ -59,10 +63,6 @@ public class ChannelDemo {
         //test04();
         //test05();
         test06();
-
-
-
-
 
     }
 
