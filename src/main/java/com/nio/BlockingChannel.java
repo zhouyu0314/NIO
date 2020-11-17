@@ -26,7 +26,7 @@ import java.nio.file.StandardOpenOption;
  *
  * 3.选择器（Selector）：是SelectableChannel的多路复用器。用于监控SelectableChannel的IO状况
  */
-public class TestBlockingChannel {
+public class BlockingChannel {
     public static void main(String[] args)throws Exception {
         new Thread(){
             @Override
